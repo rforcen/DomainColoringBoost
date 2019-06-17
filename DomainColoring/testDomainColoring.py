@@ -13,9 +13,12 @@ w, h = 1920*mf, 1080*mf
 
 lap=time()
 
-dc = DomainColoring(w, h)
+dc = DomainColoring(w, h, 'z^(5/c(1,2)) + sin(z) ^ z*c(1,8)')
 
-print('domain coloring', dc.w, 'x', dc.h, 'image, generation time:', time()-lap, 'secs')
+print('z compiler error for formula:', dc.formula, '->', dc.error)
 
-plt.imshow( dc.get_image_np() )
-plt.show()
+if not dc.error:
+    print('domain coloring formula OK, image shape:', dc.w, 'x', dc.h, 'generation time:', time()-lap, 'secs')
+
+    plt.imshow( dc.getimage_np() )
+    plt.show()
