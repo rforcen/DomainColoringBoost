@@ -1,5 +1,5 @@
 # DomainColoringBoost
-python boost callable c++ multithread implementation of domain coloring algo. includes a z compiler so you can write z expressions directly in python as:
+python boost callable c++ multithread implementation of domain coloring algo. includes a z compiler so you can write z expressions directly in python, returns a numpy(w,h,3) array that can be directly displyed using pyplot:
 
     from DomainColoring import DomainColoring
 
